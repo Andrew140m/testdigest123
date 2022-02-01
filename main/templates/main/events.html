@@ -1,0 +1,53 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="afisha">
+    <h1>Мероприятия города Сосновый Бор</h1>
+    <h1>Раздел в разработке, возможно когда-то он появится :)</h1>
+    <!-- <div class="menu">
+        <ul>
+            <li> <a href="{% url 'events' %}?page={{pre_num}}">←</a> </li>
+            {% for ind in pages %}
+            {% if ind == num %}
+            <li style="border-color: #96e674; border-width:4px; border-style:dashed"> <a href="{% url 'events' %}?page={{ind}}">{{ind}}</a> </li>
+            {% else %}
+            <li> <a href="{% url 'events' %}?page={{ind}}">{{ind}}</a> </li>
+            {% endif %}
+            {% endfor %}
+            <li> <a href="{% url 'events' %}?page={{next_num}}">→</a> </li>
+        </ul>
+    </div> -->
+
+    <div class="events">
+        {% for event in events %}
+            <div class="item">
+                <h2 class="title">{{event.title}}</h2>
+                <p class="date">Дата: {{event.date}}</p>
+                <p class="place">Место: {{event.place}}</p>
+                <div class="main">
+                    <img src="{{event.image}}">
+                    <p class="info">{{event.info}}</p>
+                </div>
+                <div class="sources">
+                    <p class="source"><a href="{{event.source}}" target="_blank">Подробнее</a></p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- <div class="menu">
+        <ul>
+            <li> <a href="{% url 'events' %}?page={{pre_num}}">←</a> </li>
+            {% for ind in pages %}
+            <hr>
+            {% if ind == num %}
+            <li style="border-color: #96e674; border-width:4px; border-style:dashed"> <a href="{% url 'events' %}?page={{ind}}">{{ind}}</a> </li>
+            {% else %}
+            <li> <a href="{% url 'events' %}?page={{ind}}">{{ind}}</a> </li>
+            {% endif %}
+            {% endfor %}
+            <li> <a href="{% url 'events' %}?page={{next_num}}">→</a> </li>
+        </ul>
+    </div> -->
+</div>
+{% endblock %}

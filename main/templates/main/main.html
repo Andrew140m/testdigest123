@@ -1,0 +1,47 @@
+{% extends 'main/base.html' %}
+{% block content %}
+            <div class="news">
+                <h1>Новости города Сосновый Бор</h1>
+                <div class="menu">
+                    <ul>
+                        <li> <a href="{% url 'homepage' %}?page={{pre_num}}">←</a> </li>
+                        {% for ind in pages %}
+                        {% if ind == num %}
+                        <li style="border-color: #96e674; border-width:4px; border-style:dashed"> <a href="{% url 'homepage' %}?page={{ind}}">{{ind}}</a> </li>
+                        {% else %}
+                        <li> <a href="{% url 'homepage' %}?page={{ind}}">{{ind}}</a> </li>
+                        {% endif %}
+                        {% endfor %}
+                        <li> <a href="{% url 'homepage' %}?page={{next_num}}">→</a> </li>
+                    </ul>
+                </div>
+                <div class="articles">
+                    {% for post in news %}
+                        <div class="item">
+                            <h2 class="title">{{post.title}}</h2>
+                            <p class="date">{{post.date}}</p>
+                            <div class="main">
+                                <img src="{{post.image}}">
+                                <p class="info">{{post.info}}</p>
+                            </div>
+                            <div class="sources">
+                                <p class="source"><a href="{{post.source}}" target="_blank">Подробнее</a></p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li> <a href="{% url 'homepage' %}?page={{pre_num}}">←</a> </li>
+                        {% for ind in pages %}
+                        {% if ind == num %}
+                        <li style="border-color: #96e674; border-width:4px; border-style:dashed"> <a href="{% url 'homepage' %}?page={{ind}}">{{ind}}</a> </li>
+                        {% else %}
+                        <li> <a href="{% url 'homepage' %}?page={{ind}}">{{ind}}</a> </li>
+                        {% endif %}
+                        {% endfor %}
+                        <li> <a href="{% url 'homepage' %}?page={{next_num}}">→</a> </li>
+                    </ul>
+                </div>
+            </div>
+{% endblock %}

@@ -1,0 +1,1 @@
+web: gunicorn newdigest.wsgi --log-file -

@@ -1,0 +1,344 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+*::-webkit-scrollbar {
+    width: 12px;               /* ширина scrollbar */
+}
+*::-webkit-scrollbar-track {
+    background: #ddb2c1;        /* цвет дорожки */
+    border-radius: 20px;
+}
+body::-webkit-scrollbar-track{
+    border-radius: 0px;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #2d2f2f;    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+    border: 3px solid #57b380;  /* padding вокруг плашки */
+}
+
+
+
+#header {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(http://s3.fotokto.ru/photo/full/221/2210185.jpg);
+    background-position: left center;/* Цвет фона header */
+}
+
+#header .container {
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.buttons{
+    width: 55%;
+    height: 100%;
+}
+
+.buttons ul{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.buttons ul li{
+    width: 175px;
+    height: 100%;
+    margin: 0px 5px;
+    display: flex;
+    background-color: #57b380; /* Цвет кнопок сверху */
+    justify-content: center;
+    border-radius: 10px;
+    -webkit-box-shadow: 8px 8px 30px 0px rgba(50, 50, 50, 0);
+    -moz-box-shadow:    8px 8px 30px 0px rgba(50, 50, 50, 0);
+    box-shadow:         8px 8px 30px 0px rgba(50, 50, 50, 0);
+}
+ul li:hover{
+    animation-name: buttons;
+    animation-duration: 3.5s;
+    -webkit-box-shadow: 8px 8px 30px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    8px 8px 30px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         8px 8px 30px 0px rgba(50, 50, 50, 0.75);
+}
+a {
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    line-height: 75px;
+    font-size: 25px;
+    color: #2d2d2d; /* Текст кнопки */
+    text-align: center;
+}
+
+a:hover{
+    animation-name: text;
+    animation-duration: 5s;
+}
+
+#content{ /* фон */
+    display: flex;
+    justify-content: space-between;
+    background-image: repeating-radial-gradient(circle farthest-side at 30px 10px, #00ffa2, #c4e894, #00ffa2 20%, #c4e894 20%); #00ffa2
+}
+
+.menu ul{
+    height: 75px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 10px 0px;
+}
+
+.menu ul li{
+    width: 100px;
+    height: 100%;
+    display: flex;
+    background-color: #57b380; /* Кнопки новости #00e8a2 */
+    justify-content: center;
+    border-radius: 10px;
+    -webkit-box-shadow: 8px 8px 30px 0px rgba(50, 50, 50, 0);
+    -moz-box-shadow:    8px 8px 30px 0px rgba(50, 50, 50, 0);
+    box-shadow:         8px 8px 30px 0px rgba(50, 50, 50, 0);
+}
+
+.menu ul li:hover{
+    -webkit-box-shadow: 8px 8px 30px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    8px 8px 30px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         8px 8px 30px 0px rgba(50, 50, 50, 0.75);
+}
+
+.news, .afisha{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news h1, .afisha h1 {
+    text-align: center;
+    font-size: 35px;
+    font-style: italic;
+}
+
+.item{ /* Цвет блока */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 15px;
+    min-height: 400px;
+    max-height: 600px;
+    padding: 15px;
+    padding: 4rem 8rem;
+    border: 10px solid black;
+    resize: both;
+    background: linear-gradient(to top, rgba(#cffffe, 0.3), rgba(#f9f7d9, 0.3), rgba(#fce2ce, 0.3), rgba(#ffc1f3, 0.3));
+    border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23cffffe' /%3E%3Cstop offset='25%25' stop-color='%23f9f7d9' /%3E%3Cstop offset='50%25' stop-color='%23fce2ce' /%3E%3Cstop offset='100%25' stop-color='%23ffc1f3' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3'/%3E %3C/svg%3E") 1;
+}
+
+.item>*{
+    margin: 5px 0px;
+}
+
+.item .title{
+    margin: 0px 25px;
+    font-size: 40px;
+}
+
+.item .date, .item .place{
+    font-size: 20px;
+    margin: 0px 50px;
+}
+
+.item .main{
+    min-height: 225px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item .main a{
+    height: 100%;
+    line-height: 50px;
+}
+
+.item .main .info{
+    font-size: 25px;
+    overflow-y: auto;
+}
+
+.item .main img{
+    height: 225px;
+    width: 400px;
+    margin: 0px 10px;
+}
+
+.item .sources{
+    display: flex;
+    flex-direction: row;
+}
+
+.sources .source{
+    height: 50px;
+    width: 150px;
+    margin: 0px 10px;
+    background-color: #57b380; /* Подробнее цвет */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item .source a{
+    line-height: 50px;
+    font-size: 25px;
+    text-align: center;
+}
+
+#content .ads{
+    width: 20%;
+    background-color: #ada9ab; /* asd */
+}
+
+#footer{
+    height: 200px;
+    background-image: url(https://www.giuliaimmobiliareaffitti.com/wp-content/uploads/2016/02/jpeg_footer_1920_400.jpg);
+    background-position: left center;  /* footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#footer .container{
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer .container a{
+    width: 100px;
+    height: 100px;
+    margin: 0px 35px;
+}
+
+#footer .container .info{
+    color: lightblue;
+}
+
+.item_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    background-color: #f5f9dd;
+    min-height: 500px;
+}
+
+.backbutton{
+    border-radius: 10%;
+    border-color: black;
+    border-style: solid;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: #57b380;
+    -webkit-box-shadow: 8px 8px 30px 0px rgba(50, 50, 50, 0);
+    -moz-box-shadow:    8px 8px 30px 0px rgba(50, 50, 50, 0);
+    box-shadow:         8px 8px 30px 0px rgba(50, 50, 50, 0);
+}
+
+.backbutton:hover{
+    animation-name: buttons;
+    animation-duration: 2s;
+    -webkit-box-shadow: 8px 8px 30px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    8px 8px 30px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         8px 8px 30px 0px rgba(50, 50, 50, 0.75);
+}
+
+
+
+@keyframes text {
+    0%{
+        color: #2d2d2d;
+    }
+    25%{
+        color: #558e9e;
+    }
+    75%{
+        color: #558e9e;
+    }
+    100%{
+        color: #2d2d2d;
+    }
+}
+
+@keyframes buttons {
+    from{
+        -webkit-box-shadow: 8px 8px 30px 0px rgba(50, 50, 50, 0);
+        -moz-box-shadow:    8px 8px 30px 0px rgba(50, 50, 50, 0);
+        box-shadow:         8px 8px 30px 0px rgba(50, 50, 50, 0);
+    }
+    to{
+        -webkit-box-shadow: 8px 8px 30px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow:    8px 8px 30px 0px rgba(50, 50, 50, 0.75);
+        box-shadow:         8px 8px 30px 0px rgba(50, 50, 50, 0.75);
+    }
+}
+
+@media(max-width: 1045px) {
+    #header{
+        flex-direction: row;
+        justify-content: center;
+        height: 200px;
+    }
+
+    #header .container{
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 90%;
+    }
+
+    .buttons{
+        width: 100%;
+        height: 75%;
+    }
+
+    .buttons ul li{
+        width: 25%;
+    }
+    .buttons ul li a{
+        font-size: 40px;
+        line-height: 150px;
+    }
+    .item .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 550px;
+    }
+    .item .main img{
+        width: 100%;
+        height: 325px;
+    }
+    .item .main .info{
+        font-size: 30px;
+    }
+    .item{
+        min-height: 700px;
+        max-height: 900px;
+    }
+}
