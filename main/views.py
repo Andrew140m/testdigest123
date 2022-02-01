@@ -25,7 +25,6 @@ def parse_all(num):
         'sbor' : sbor,
         'mysbor' : mysbor
     }
-    #пельмени 
 
     return output
 
